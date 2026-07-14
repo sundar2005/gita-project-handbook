@@ -184,3 +184,20 @@ thead th{ background:var(--peacock-soft); color:var(--peacock-deep);
 .minute dt{ color:#e6a23c !important; }
 .minute dd{ color:rgba(242,239,230,.92) !important; }
 .minute .carry{ color:#f2efe6 !important; }
+
+/* Appendix B — distinct virtue cards */
+.virtues{ display:grid; gap:1rem; margin:1.3rem 0; }
+.virtue{ background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent);
+  border-radius:12px; padding:1rem 1.2rem; box-shadow:var(--shadow); }
+.virtue .v-head{ display:flex; align-items:center; gap:.7rem; margin-bottom:.55rem; }
+.virtue .v-num{ flex:none; width:2.1rem; height:2.1rem; border-radius:50%; background:var(--peacock);
+  color:var(--paper); font-family:var(--sans); font-weight:700; display:grid; place-items:center; }
+.virtue .v-meta{ display:flex; flex-direction:column; }
+.virtue .v-name{ font-size:1.25rem; font-weight:600; color:var(--peacock-deep); line-height:1.15; }
+.virtue .v-ch{ font-family:var(--sans); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
+.virtue p{ margin:.35rem 0; }
+.virtue p span{ font-family:var(--sans); font-size:.66rem; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; display:inline-block; margin-right:.5rem; padding:.1rem .5rem; border-radius:5px; vertical-align:.06em; }
+.virtue .v-is span{ background:var(--peacock); color:var(--paper); }
+.virtue .v-do span{ background:var(--accent); color:var(--paper); }
+.virtue .v-not span{ background:transparent; border:1px solid var(--line-strong); color:var(--ink-soft); }
