@@ -38,27 +38,34 @@ def header(active):
     nav=lambda h,l,a: f'<a href="{h}"{" aria-current=\"page\"" if a==active else ""}>{l}</a>'
     return ('<header class="site-header"><div class="bar">'
       '<a class="brand" href="index.html"><span class="dot">◆</span>&nbsp;The GITA Project<span class="dot">™</span></a>'
-      '<nav class="site-nav">'
+      '<div class="bar-right">'
+      '<nav class="site-nav" id="sitenav">'
       + nav("index.html","Home","home")
       + nav("introduction.html","Introduction","intro")
       + nav("index.html#journey","Journey","journey")
       + nav("living-the-gita.html","Living the Gita","conclusion")
       + nav("appendices.html","Appendices","appendices")
       + nav("glossary.html","Glossary","glossary")
-      + '<button class="themebtn" id="tt" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>'
-      '</nav></div></header>')
+      + '</nav>'
+      '<button class="themebtn" id="tt" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>'
+      '<button class="navtoggle" id="navtoggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>'
+      '</div></div></header>')
 
 FOOTER=('<footer class="site-footer">The GITA Project™ — One\'s Own Journey Through Life · '
-  'Student Handbook v1.0 (draft). The Bhagavad Gita is a timeless sacred text of humanity\'s shared spiritual heritage.</footer>')
+  'Student Handbook v1.0 · Open Edition. Sanskrit verses and the English translation (Annie Besant, 1922) are in the public domain.</footer>')
 
 THEMEJS=("(function(){var b=document.getElementById('tt'),r=document.documentElement;"
  "try{var s=localStorage.getItem('gita-theme');if(s)r.setAttribute('data-theme',s);}catch(e){}"
- "if(b)b.addEventListener('click',function(){var c=r.getAttribute('data-theme');"
- "var n=c==='dark'?'light':(c==='light'?'dark':(matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark'));"
- "r.setAttribute('data-theme',n);try{localStorage.setItem('gita-theme',n);}catch(e){}});})();")
+ "if(b)b.addEventListener('click',function(){var c=r.getAttribute('data-theme')||'dark';"
+ "var n=c==='dark'?'light':'dark';"
+ "r.setAttribute('data-theme',n);try{localStorage.setItem('gita-theme',n);}catch(e){}});"
+ "var nt=document.getElementById('navtoggle'),nv=document.getElementById('sitenav');"
+ "if(nt&&nv){nt.addEventListener('click',function(){var o=nv.classList.toggle('open');nt.setAttribute('aria-expanded',o);});"
+ "nv.addEventListener('click',function(e){if(e.target.tagName==='A')nv.classList.remove('open');});}"
+ "})();")
 
 def shell(title, body, active):
-    return (f'<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+    return (f'<!doctype html>\n<html lang="en" data-theme="dark">\n<head>\n<meta charset="utf-8">\n'
       f'<meta name="viewport" content="width=device-width, initial-scale=1">\n'
       f'<title>{title} — The GITA Project</title>\n'
       f'<link rel="stylesheet" href="assets/site.css">\n</head>\n<body>\n'
