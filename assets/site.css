@@ -259,9 +259,6 @@ thead th{ background:var(--peacock-soft); color:var(--peacock-deep);
 .pillar .p-n{ font-family:var(--sans); font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
 .pillar h3{ margin:.25rem 0 .5rem; font-size:1.3rem; color:var(--peacock-deep); }
 .pillar p{ margin:0; font-size:.96rem; color:var(--ink-soft); line-height:1.55; }
-.pillar:not(:last-child)::after{ content:'→'; position:absolute; right:-1.05rem; top:3.4rem;
-  color:var(--accent); font-size:1.2rem; font-weight:700; z-index:2; }
 @media (max-width:640px){
   .pillar{ padding:1.4rem 1.2rem; }
-  .pillar:not(:last-child)::after{ content:'↓'; right:auto; left:50%; top:auto; bottom:-1.2rem; transform:translateX(-50%); }
 }
