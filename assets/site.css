@@ -151,7 +151,8 @@ ol.disc li b{display:block;font-family:var(--sans);font-size:.72rem;letter-spaci
 .home-hero .kicker{margin-bottom:.4rem}
 .home-hero h1{font-family:var(--serif);font-size:clamp(2.2rem,6vw,3.2rem);line-height:1.05;margin:.2rem 0;font-weight:600}
 .home-hero .sub{font-size:1.2rem;color:var(--ink-soft);max-width:34rem}
-.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;margin:1.6rem 0}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.6rem 0}
+@media (max-width:640px){ .pillars{grid-template-columns:1fr} }
 .pillar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;box-shadow:var(--shadow)}
 .pillar .n{font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700}
 .pillar h3{margin:.3rem 0 .4rem;font-size:1.2rem}
