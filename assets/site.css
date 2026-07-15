@@ -201,3 +201,25 @@ thead th{ background:var(--peacock-soft); color:var(--peacock-deep);
 .virtue .v-is span{ background:var(--peacock); color:var(--paper); }
 .virtue .v-do span{ background:var(--accent); color:var(--paper); }
 .virtue .v-not span{ background:transparent; border:1px solid var(--line-strong); color:var(--ink-soft); }
+
+/* visually-hidden heading (image carries the title visually) */
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.plate.hero img{ width:100%; height:auto; display:block; }
+
+/* Three Phases cards */
+.phases{ display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:1rem; margin:1.2rem 0; }
+.phase{ background:var(--card); border:1px solid var(--line); border-top:4px solid var(--accent);
+  border-radius:12px; padding:1rem 1.15rem; box-shadow:var(--shadow); }
+.phase .p-num{ font-family:'Segoe UI',system-ui,sans-serif; font-size:.72rem; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--accent); }
+.phase .p-ch{ font-family:'Segoe UI',system-ui,sans-serif; font-size:.72rem; color:var(--ink-soft); margin-left:.5rem; }
+.phase h3{ margin:.25rem 0 .4rem; font-size:1.15rem; color:var(--peacock-deep); }
+.phase p{ margin:0; font-size:.98rem; }
+/* Glossary cards */
+.glossary-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:.7rem; margin:1.2rem 0; }
+.gloss{ background:var(--card); border:1px solid var(--line); border-left:3px solid var(--peacock);
+  border-radius:10px; padding:.65rem .85rem; }
+.gloss .gterm{ display:block; font-weight:700; color:var(--peacock-deep); font-size:1.05rem;
+  font-family:'Nirmala UI','Noto Sans Devanagari',serif; }
+.gloss .gdef{ display:block; font-size:.94rem; margin-top:.1rem; }

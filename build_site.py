@@ -177,9 +177,9 @@ terms=[
  ("Yoga","The path connecting our lives with the Divine through wisdom, action, devotion, and self-mastery."),
 ]
 gl='<main class="wrap"><div class="reading"><p class="kicker">Appendix</p><h1 class="title" style="font-family:var(--serif)">Glossary</h1>'
-gl+='<p class="eng">Key Sanskrit terms from the journey.</p><dl class="glossary">'
-for t,d in terms: gl+=f'<dt>{t}</dt><dd>{d}</dd>'
-gl+='</dl></div></main>'
+gl+='<p class="eng">Key Sanskrit terms from the journey.</p><div class="glossary-grid">'
+for t,d in terms: gl+=f'<div class="gloss"><span class="gterm">{t}</span><span class="gdef">{d}</span></div>'
+gl+='</div></div></main>'
 open(os.path.join(HERE,'glossary.html'),'w',encoding='utf-8').write(shell("Glossary", gl, "glossary"))
 
 print(f"Built {built} chapter pages + index.html + glossary.html")
