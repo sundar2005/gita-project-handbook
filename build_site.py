@@ -130,12 +130,20 @@ for slug,srcfile,title,active in EXTRAS:
     open(os.path.join(HERE,slug+'.html'),'w',encoding='utf-8').write(shell(title,main,active))
 
 # ---- index ----
-pillars=('<div class="pillars">'
- '<div class="pillar"><div class="n">Pillar One</div><h3>Scripture</h3>'
+IC_BOOK=('<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+ '<path d="M16 8c-2.2-1.6-5.2-2.2-8.5-2.2V25c3.3 0 6.3.6 8.5 2.2 2.2-1.6 5.2-2.2 8.5-2.2V5.8c-3.3 0-6.3.6-8.5 2.2z"/><path d="M16 8v19.2"/></svg>')
+IC_COMPASS=('<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+ '<circle cx="16" cy="16" r="11.5"/><path d="M21.5 10.5l-3 7-6.5 3 3-7z" fill="currentColor" stroke="none"/><circle cx="16" cy="16" r="1.3" fill="currentColor" stroke="none"/></svg>')
+IC_LOTUS=('<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+ '<path d="M16 7c2.5 3.5 2.5 8 0 12-2.5-4-2.5-8.5 0-12z"/><path d="M16 19c-4.5-2.5-8-2-11.5.5 2 4.5 6.5 6.5 11.5 6.5"/><path d="M16 19c4.5-2.5 8-2 11.5.5-2 4.5-6.5 6.5-11.5 6.5"/></svg>')
+pillars=('<h2 class="sec pillars-title">The Three Pillars</h2>'
+ '<p class="pillars-sub">Every chapter moves through the same three steps.</p>'
+ '<div class="pillars">'
+ f'<div class="pillar"><div class="pillar-ic">{IC_BOOK}</div><div class="p-n">Pillar One</div><h3>Scripture</h3>'
  '<p>Every chapter begins with what Lord Shri Krishna teaches Arjuna — real verses, in Sanskrit and English.</p></div>'
- '<div class="pillar"><div class="n">Pillar Two</div><h3>Understanding Dharma</h3>'
+ f'<div class="pillar"><div class="pillar-ic">{IC_COMPASS}</div><div class="p-n">Pillar Two</div><h3>Understanding Dharma</h3>'
  '<p>We learn to think through life\'s hard choices — not with slogans, but with wisdom.</p></div>'
- '<div class="pillar"><div class="n">Pillar Three</div><h3>Character</h3>'
+ f'<div class="pillar"><div class="pillar-ic">{IC_LOTUS}</div><div class="p-n">Pillar Three</div><h3>Character</h3>'
  '<p>Each week develops one virtue, practised in real life until it becomes who we are.</p></div></div>')
 jrows=[]
 for num,sk,en,th,fn in CHAPTERS:
