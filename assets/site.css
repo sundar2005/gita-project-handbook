@@ -288,3 +288,29 @@ thead th{ background:var(--peacock-soft); color:var(--peacock-deep);
   color:var(--paper); background:var(--peacock-deep); border-radius:999px; padding:.55rem 1.15rem; box-shadow:var(--shadow); }
 .dl-btn:hover{ background:var(--peacock); }
 .dl-note{ font-family:var(--sans); font-size:.8rem; color:var(--ink-soft); margin:.4rem 0 0; }
+
+/* ---- Cover-style homepage hero (matches the e-book cover) ---- */
+.cover-hero{ text-align:center; border-radius:18px; margin:1rem 0 2.2rem; padding:2.4rem 1.6rem 2.1rem;
+  color:#f3ecdd; background:radial-gradient(130% 82% at 50% -12%, #2c2140 0%, #16111f 60%, #100c17 100%);
+  box-shadow:0 12px 44px rgba(0,0,0,.30); }
+.cover-hero .ch-eyebrow{ font-family:var(--sans); font-size:.72rem; font-weight:700; letter-spacing:.28em;
+  text-transform:uppercase; color:#eaa93d; margin:0 0 .5rem; }
+.cover-hero .ch-title{ font-size:clamp(2.2rem,6.5vw,3.2rem); font-weight:700; line-height:1.02;
+  letter-spacing:-.015em; margin:0; color:#f8f2e4; }
+.cover-hero .ch-sub{ font-style:italic; font-size:1.15rem; color:#dcc79c; margin:.3rem 0 1.25rem; }
+.cover-hero .ch-art{ display:block; width:100%; max-width:38rem; height:auto; border:0; border-radius:14px;
+  margin:0 auto 1.35rem; box-shadow:0 18px 52px rgba(0,0,0,.55); }
+.cover-hero .ch-tagline{ font-size:clamp(1.4rem,4.6vw,1.75rem); font-weight:700; line-height:1.2; color:#f4cd72;
+  text-shadow:0 2px 22px rgba(234,169,61,.45); max-width:30rem; margin:0 auto .7rem; }
+.cover-hero .ch-hook{ font-size:1.02rem; line-height:1.62; color:#c6b9a6; max-width:34rem; margin:0 auto 1.2rem; }
+.cover-hero .ch-hook em{ color:#eaa93d; font-style:normal; font-weight:600; }
+.cover-hero .ch-hook .hl{ color:#f4cd72; font-weight:600; background:linear-gradient(transparent 62%, rgba(234,169,61,.28) 0); padding:0 .06em; }
+.cover-hero .ch-chips{ display:flex; justify-content:center; align-items:center; gap:.55rem; flex-wrap:wrap; margin:0 0 1.5rem; }
+.cover-hero .chip{ font-family:var(--sans); font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  color:#f6d89e; background:linear-gradient(180deg, rgba(234,169,61,.22), rgba(234,169,61,.05));
+  border:1px solid rgba(234,169,61,.55); border-radius:999px; padding:.42rem .95rem; box-shadow:0 3px 14px rgba(234,169,61,.14); }
+.cover-hero .ch-cta{ display:flex; justify-content:center; align-items:center; gap:1.3rem; flex-wrap:wrap; }
+.cover-hero .ch-read{ color:#f4cd72; text-decoration:none; font-family:var(--sans); font-weight:600; font-size:.98rem; }
+.cover-hero .ch-read:hover{ color:#ffe6ad; }
+.dl-btn-lg{ font-size:.95rem; padding:.62rem 1.3rem; background:#eaa93d; color:#1a1206; }
+.dl-btn-lg:hover{ background:#f4cd72; }
