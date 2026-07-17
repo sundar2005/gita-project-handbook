@@ -52,7 +52,7 @@ def header(active):
       '</div></div></header>')
 
 FOOTER=('<footer class="site-footer">The GITA Project™ — One\'s Own Journey Through Life · '
-  'Student Handbook v1.0. Verse translations by Swami Mukundananda · holy-bhagavad-gita.org</footer>')
+  'Student Handbook v1.0. Verse translations by Swami Mukundananda · holy-bhagavad-gita.org<br/>© 2026 <a href="https://b-temple.org/">Bharatiya Temple</a>. All rights reserved.</footer>')
 
 THEMEJS=("(function(){var b=document.getElementById('tt'),r=document.documentElement;"
  "try{var s=localStorage.getItem('gita-theme');if(s)r.setAttribute('data-theme',s);}catch(e){}"
