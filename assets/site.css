@@ -314,3 +314,10 @@ thead th{ background:var(--peacock-soft); color:var(--peacock-deep);
 .cover-hero .ch-read:hover{ color:#ffe6ad; }
 .dl-btn-lg{ font-size:.95rem; padding:.62rem 1.3rem; background:#eaa93d; color:#1a1206; }
 .dl-btn-lg:hover{ background:#f4cd72; }
+
+/* "Start here" entries at the top of the journey */
+.journey-lead{ color:var(--ink-soft); margin:.2rem 0 .8rem; }
+.journey a.start-here{ border:1px solid var(--accent);
+  background:linear-gradient(180deg, var(--accent-soft), var(--card)); }
+.journey a.start-here .wk{ color:var(--accent); }
+.journey a.start-here:hover{ border-color:var(--peacock); }
