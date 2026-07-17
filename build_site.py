@@ -52,7 +52,7 @@ def header(active):
       '</div></div></header>')
 
 FOOTER=('<footer class="site-footer">The GITA Project™ — One\'s Own Journey Through Life · '
-  'Student Handbook v1.0 · Open Edition. Sanskrit verses and the English translation (Annie Besant, 1922) are in the public domain.</footer>')
+  'Student Handbook v1.0. Verse translations by Swami Mukundananda · holy-bhagavad-gita.org</footer>')
 
 THEMEJS=("(function(){var b=document.getElementById('tt'),r=document.documentElement;"
  "try{var s=localStorage.getItem('gita-theme');if(s)r.setAttribute('data-theme',s);}catch(e){}"
@@ -74,11 +74,11 @@ def shell(title, body, active):
 def linkify(html):
     # verse header number (… · 2.47) -> external verse link
     html=re.sub(r'(<p class="vh">[^<]*?·\s*)(\d+)\.(\d+)(</p>)',
-        lambda m:f'{m.group(1)}<a href="https://en.wikisource.org/wiki/Bhagavad-Gita_(Besant_4th)/Discourse_{m.group(2)}" target="_blank" rel="noopener">{m.group(2)}.{m.group(3)}</a>{m.group(4)}',
+        lambda m:f'{m.group(1)}<a href="https://www.holy-bhagavad-gita.org/chapter/{m.group(2)}/verse/{m.group(3)}" target="_blank" rel="noopener">{m.group(2)}.{m.group(3)}</a>{m.group(4)}',
         html)
     # attribution "Bhagavad Gita X.Y" -> external verse link
     html=re.sub(r'Bhagavad Gita (\d+)\.(\d+)',
-        lambda m:f'<a href="https://en.wikisource.org/wiki/Bhagavad-Gita_(Besant_4th)/Discourse_{m.group(1)}" target="_blank" rel="noopener">Bhagavad Gita {m.group(1)}.{m.group(2)}</a>',
+        lambda m:f'<a href="https://www.holy-bhagavad-gita.org/chapter/{m.group(1)}/verse/{m.group(2)}" target="_blank" rel="noopener">Bhagavad Gita {m.group(1)}.{m.group(2)}</a>',
         html)
     return html
 
@@ -155,14 +155,14 @@ for num,sk,en,th,fn in CHAPTERS:
                      f'<span><span class="nm">{sk}</span> — <span class="th">{th}</span> · <em>coming soon</em></span></span></li>')
 home=(f'<main class="wrap">'
  f'<section class="cover-hero">'
- f'<p class="ch-eyebrow">Student Handbook · Open Edition</p>'
+ f'<p class="ch-eyebrow">Student Handbook · The GITA Project</p>'
  f'<h1 class="ch-title">The GITA Project™</h1>'
  f'<p class="ch-sub">One\'s Own Journey Through Life</p>'
  f'<img class="ch-art" src="images/cover.jpg" alt="Lord Shri Krishna blesses Arjuna in the golden chariot at sunrise on the field of Kurukshetra."/>'
  f'<p class="ch-tagline">Timeless wisdom for the choices you face right now.</p>'
  f'<p class="ch-hook">Five thousand years old — and it still speaks your language. Climb into the chariot beside Arjuna as Lord Shri Krishna turns <span class="hl">fear</span> into <span class="hl">clarity</span>, with real answers for the things you actually face: courage, friendship, failure, and doing what is <em>right</em>.</p>'
  f'<div class="ch-chips"><span class="chip">18 Chapters</span><span class="chip">18 Virtues</span><span class="chip">One Journey</span></div>'
- f'<div class="ch-cta"><a class="dl-btn dl-btn-lg" href="The_GITA_Project_OpenEdition.epub" download>&#8681;&nbsp; Download the e-book</a> <a class="ch-read" href="introduction.html">Start reading &#8250;</a></div>'
+ f'<div class="ch-cta"><a class="dl-btn dl-btn-lg" href="The_GITA_Project.epub" download>&#8681;&nbsp; Download the e-book</a> <a class="ch-read" href="introduction.html">Start reading &#8250;</a></div>'
  f'</section>'
  f'{pillars}'
  f'<h2 class="sec" id="journey">The 18-Week Journey</h2>'
